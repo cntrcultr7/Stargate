@@ -20,7 +20,7 @@ PK. Unique id per episode<br>
 
 - **Status** (0 / 1 / 2)<br>
 0 = Draft (mobile only)
-1 = Saved (default value for desktop regardless if save button actively saved)
+1 = Saved (default value for desktop regardless if save button actively saved)<br>
 2 = Deleted<br>
 *Draft logic deprecated in desktop and is live in mobile (as of 13-08-2021)*<br>
 - **EventId** (int)<br>
