@@ -19,23 +19,23 @@ PK. Unique id per episode<br>
 - Date (datetime)<br>
 
 - **Status** (0 / 1 / 2)<br>
-0 = Draft 
+0 = Draft (mobile only)
 1 = Saved (default value for desktop regardless if save button actively saved)
-2 = Deleted
+2 = Deleted<br>
 *Draft logic deprecated in desktop and is live in mobile (as of 13-08-2021)*<br>
-- EventId (int)<br>
+- **EventId** (int)<br>
 Id of booking if episode created from booking origin.<br>
-- UserId (int)<br>
+- **UserId** (int)<br>
 Id of user who created episode<br>
-- Comments (string)<br>
+- **Comments** (string)<br>
 [Deprecated] Old feature logic (as of 13-08-2021)<br>
-- Diagnosis (string)<br>
+- **Diagnosis** (string)<br>
 [Deprecated] Old feature logic (as of 13-08-2021)<br>
-- Medication (string)<br>
+- **Medication** (string)<br>
 [Deprecated] Old feature logic (as of 13-08-2021)<br>
-- PatientId (int)<br>
+- **PatientId** (int)<br>
 ID of patient episode is linked to.<br>
 
 ---
 ### Owner/contact person
-product analytics or 
+product analytics
