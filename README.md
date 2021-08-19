@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+# healthrecords
 
-You can use the [editor on GitHub](https://github.com/cntrcultr7/Stargate/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+---
+### Short description
 
-### Markdown
+Logs every event associated with the creation of an "Episode" (ep) in Electronic Health Records (EHR) in SaaS.
+(1) User can create an ep. associated with a booking or outside of a booking
+(2) User can create + edit eps. on both mobile app & desktop
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+*An ep. can be imported, need to account for this distinction b/t episodes created in saas.
+*IF an ep. created outside of booking THEN eventid IS NULL
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+---
+### Columns
+- **Id** (int)<br>
+PK. Unique id per episode<br>
+- Date (datetime)<br>
 
-- Bulleted
-- List
+- **Status** (0 / 1 / 2)<br>
+0 = Draft 
+1 = Saved (default value for desktop regardless if save button actively saved)
+2 = Deleted
+*Draft logic deprecated in desktop and is live in mobile (as of 13-08-2021)*<br>
+- EventId (int)<br>
+Id of booking if episode created from booking origin.<br>
+- UserId (int)<br>
+Id of user who created episode<br>
+- Comments (string)<br>
+[Deprecated] Old feature logic (as of 13-08-2021)<br>
+- Diagnosis (string)<br>
+[Deprecated] Old feature logic (as of 13-08-2021)<br>
+- Medication (string)<br>
+[Deprecated] Old feature logic (as of 13-08-2021)<br>
+- PatientId (int)<br>
+ID of patient episode is linked to.<br>
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cntrcultr7/Stargate/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+---
+### Owner/contact person
+product analytics or 
